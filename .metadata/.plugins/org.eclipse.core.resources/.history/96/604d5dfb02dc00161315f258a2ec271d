@@ -1,0 +1,33 @@
+package week01;
+
+import java.util.Scanner;
+
+/*
+ * Problem 11013 Get Straight
+ * 
+ */
+public class Main {
+	public static void main(String[] args) {
+		Main main = new Main();
+		main.begin();
+	}
+	private String[] hand;
+	public void begin(){
+		Scanner in = new Scanner(System.in);
+		hand = new String[5];
+		String line = "";
+		while(in.hasNext() && !line.equals("#")){
+			line = in.nextLine().trim();
+			hand[0] = line.substring(0, 2);
+			hand[1] = line.substring(3, 5);
+			hand[2] = line.substring(6, 8);
+			hand[3] = line.substring(7, 9);
+			hand[4] = line.substring(10, 11);
+		}
+	}
+	public void printHand(){
+		for(String card : hand){
+			System.out.print(card + " ");
+		}
+	}
+}

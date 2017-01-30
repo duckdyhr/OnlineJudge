@@ -1,0 +1,58 @@
+package week01;
+
+import java.util.Scanner;
+
+/*
+ * Problem 11013 Get Straight
+ * 
+ */
+public class Main {
+	public static void main(String[] args) {
+		Main main = new Main();
+		main.begin();
+	}
+	private String[] hand;
+	public void begin(){
+		Scanner in = new Scanner(System.in);
+		hand = new String[5];
+		String line = in.nextLine();
+		while(in.hasNext() && !line.equals("#")){
+			hand[0] = line.substring(0, 2);
+			hand[1] = line.substring(3, 5);
+			hand[2] = line.substring(6, 8);
+			hand[3] = line.substring(9, 11);
+			hand[4] = line.substring(12, 14);
+			printHand();
+			sortHand();
+			printHand();
+			System.out.println();
+			line = in.nextLine().trim();
+		}
+	}
+	private void sortHand(){
+		for(int i = 0; i < hand.length; i++){
+			String temp = hand[i];
+			int j;
+			for(j = i-1; j >= 0 && isC1BeforeC2(temp, hand[j]); j--){
+				hand[j+1] = hand[j];
+				hand[j+1] = temp;
+			}
+		}
+	}
+	
+	private boolean isC1BeforeC2(String c1, String c2){
+		if(c1.charAt(0) =='A' || c2.charAt(0) == 'K'){
+			return true;
+		}
+		else {
+			return (c1.charAt(0)-'0')< (c2.charAt(0)-'0');
+		}
+	}
+	
+	private void printHand(){
+		for(String card : hand){
+			System.out.print(card + " ");
+		}
+		System.out.println();
+	}
+}

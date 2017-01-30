@@ -1,0 +1,12 @@
+package week01;
+
+public class Problem01 {
+	public static void main(String[] args) {
+		Problem01 main = new Problem01();
+		main.begin();
+	}
+	
+	public void begin(){
+		
+	}
+}

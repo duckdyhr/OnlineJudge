@@ -1,0 +1,22 @@
+package week01;
+
+import java.io.*;
+
+public class CompareOutput {
+	public static void main(String[] args) {
+		String file1 = "/Users/Arthur/Documents/OnlineJudge/UHunt_training/src/week01/Problem02Output";
+		String file2 = "/Users/Arthur/Documents/OnlineJudge/UHunt_training/src/week01/Problem02Mine";
+		try {
+			BufferedReader br1 = new BufferedReader(new FileReader(file1));
+			BufferedReader br2 = new BufferedReader(new FileReader(file2));
+			String sCurrentLine;
+
+			while ((sCurrentLine = br.readLine()) != null) {
+				System.out.println(sCurrentLine);
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

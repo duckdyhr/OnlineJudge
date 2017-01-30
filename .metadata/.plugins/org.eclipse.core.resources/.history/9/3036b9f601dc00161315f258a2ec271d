@@ -1,0 +1,15 @@
+package week01;
+
+/*
+ * Problem 11013 Get Straight
+ * 
+ */
+public class Main {
+	public static void main(String[] args) {
+		Main main = new Main();
+		main.begin();
+	}
+	public void begin(){
+		
+	}
+}

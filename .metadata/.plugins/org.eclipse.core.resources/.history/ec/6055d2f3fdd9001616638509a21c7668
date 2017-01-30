@@ -1,0 +1,24 @@
+package week01;
+
+import java.util.Scanner;
+
+public class Problem01 {
+	public static void main(String[] args) {
+		Problem01 main = new Problem01();
+		main.begin();
+	}
+	
+	public void begin(){
+		Scanner in = new Scanner(System.in);
+		String result = in.nextLine();
+		while(in.hasNext()){
+			result = in.nextLine();
+			System.out.println(result);
+		}
+		in.close();
+	}
+	
+	public static String readLine(){
+		return "";
+	}
+}

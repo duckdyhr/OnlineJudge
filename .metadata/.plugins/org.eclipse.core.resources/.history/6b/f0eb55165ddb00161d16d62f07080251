@@ -1,0 +1,20 @@
+package week01;
+
+import java.io.BufferedReader;
+
+public class CompareOutput {
+	public static void main(String[] args) {
+		String file1 = "";
+		try (BufferedReader br = new BufferedReader(new FileReader(FILENAME))) {
+
+			String sCurrentLine;
+
+			while ((sCurrentLine = br.readLine()) != null) {
+				System.out.println(sCurrentLine);
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
